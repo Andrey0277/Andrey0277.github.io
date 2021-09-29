@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Абсолютное позиционирование</title>
+  <style type="text/css">
+  
+  
+   body { 
+        background: url(http://bgfons.com/upload/paint_texture2104.jpg) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 600%; 
+		overflow: auto;
+		
+    }
+  
+   
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   
+
+   #header {
+    height: 180px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+   }
+   
+   
+   #hr1 {
+    border: none; /* Убираем границу */
+    background-color:black ; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #header h1 { padding: 20px; margin: 0; }
+   
+   
+   #sidebar { 
+    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 82px; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+    top: 82px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+  }
+  
+     #content2 { 
+        position: static;
+        background: #ffffff;
+        width: 900px;
+       
+
+        margin-top: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+		 margin: 0 auto;
+        outline: 2px solid #000;
+
+        overflow: auto;
+    }
+  #sidebar1 {
+  
+		border-left:2px solid #000;
+        margin-top: 83px;
+        overflow: auto; 
+
+        width: 300px; 
+        height: 650px;
+
+        float: right;
+
+        background: #ffffff; 
+
+        top: 100px; 
+        bottom: 0; 
+    }
+  
+  </style>
+ </head>
+ <body>
+ 
+ 
+
+ 
+ <div id="content2"> 
+ 
+  
+ 
+  <div id="header"><h1> <center>  Лабораторна 4<br> 
+Програмування списків мовами функціонального програмування
+
+	 <br> Варіант 8   </center> </h1>
+   </div>
+  
+  <div id="content">
+   <h2>  <center> Виконавець  </center>  </h2>
+   <p>
+   
+   <table>
+        <tr><td> Посада: </td> <td>  Студент  </td></tr>
+		  <tr><td> Курс: </td> <td>  IV  </td></tr>
+	    <tr><td> Група:   </td> <td>      ІПЗ-42 </td></tr>
+		<tr><td>  ПІБ:    </td> <td>       Іваненко А.Ю </td></tr>
+		<tr><td> Рік навчання: </td> <td> 2021-2022 </td></tr>
+	</table>
+
+	
+   <hr id ="hr1">
+  <h2>  <center> Зміст</center>  </h2>
+	
+	<h3><a href="#k1">Мета</a></h3>
+	<h3><a href="#k2">Умова задачі</a></h3>
+	<h3><a href="#k3">Структура програми</a></h3>
+	<h3><a href="#k4">Обгрунтування вибору середовища</a></h3>
+	<h3><a href="#k5">Код програми в коментарях</a></h3>
+	<h3><a href="#k6">Посилання на проект з вихідним кодом</a></h3>
+	<h3><a href="#k7">Скріншоти результатів</a></h3>
+	<h3><a href="#k8">Аналіз достовірності результатів</a></h3>
+	<h3><a href="#k9">Висновки</a></h3>
+	
+	<hr id ="hr1">
+
+
+   
+   <h2>  <center>  <a name="k1"></a>  Мета  </center>  </h2>
+	   
+ Опанувати теоретичні основи використання списків функціональними мовами та розробити програми обробки списків
+		<hr id ="hr1">  
+	   
+       
+   <h2>  <center> <a name="k2"></a> Умови задач </center>  </h2>
+   
+	  <center> <h3> Задача 1 </h3> </center>
+	8.1 Створити список чисел, які є числами Фібоначчі, задавши їх кількість. Числа Фібоначчі складають послідовність 1, 1, 2, 3, 5, 8, …, в якій кожне наступне число дорівнює сумі двох попередніх. Вивести створений список. Виконати такі операції:
+<br>a)	Визначити елемент списку, вказавши його позицію в списку;
+<br>b)	Довести властивість: f1 + f2 + ... + fn = fn+2 – 1, де fn – позначає n-ий член послідовності Фібоначчі;
+<br>c)	Сформувати новий список з елементів попереднього, які є простими числами
+
+		 
+	   
+	 <center>  <h3> Задача 2 </h3> <br></center>
+	8.2. Написати код, що моделює процес управління проектом за гнучкою методологією Scrum. Беклог продукту складає список задач з їх пріоритетами. Пріоритети складають ряд Фібоначчі. Планування спринту передбачає створення нового списку задач із беклогу, які будуть виконуватися протягом спринту заданої тривалості. Завдання, які вибрані для спринту, видаляються із беклогу. Після виконання спринту підсумовуються бали тих задач, які були реалізовані. Планується новий спринт. Вивести на екран сценарій управління проектом за методологією Scrum. 
+
+	  
+		<hr id ="hr1">  
+
+	
+   <h2>  <center><a name="k3"></a> Структура програми  </center>  </h2>
+   
+	   <center>  <h3> Схема задачі 1 </h3> <br></center>
+	   
+	   <center><img src="sheam_1_1.png" width="500" class="round"></center> <br>
+	   
+	    <center>  Доведення 2 пункту </center> <br>
+	    <center><img src="sheam_1_1_1.png" width="500" class="round"></center> <br>
+	   
+
+		<center>  <h3> Схема задачі 2 </h3> <br></center>
+	   
+		  <center><img src="sheam_1_2.png" width="500" class="round"></center> 
+	   
+		<hr id ="hr1">  
+   
+    <h2>  <center> <a name="k4"></a>Обгрунтування вибору середовища та мови функціонального програмування  </center>  </h2>
+   
+		<pre>
+	 Online Clisp IDE https://www.jdoodle.com/execute-clisp-online/ 
+	 Середовище вибране через: 
+		a) -   Легкий зрозумілий інтерфес
+		b) -	Не потрібно нічого  встановлювати на комп'ютер.
+	 Мова Sheme вибрана через:
+		а) - Лекції ведуться на цій мові.
+		b) - Простий синтаксис.
+		
+	  </pre>
+	   <hr id ="hr1">  
+   
+   <h2>  <center><a name="k5"></a>Код програми з коментарями   </center>  </h2>
+		  <h3>  <center>Код програми 1   </center>  </h3>
+		  <pre> 
+		
+(define (my-length lis)
+   (cond ((null? lis)
+          0)
+         (else
+          (+ 1 (my-length (cdr lis))))))
+
+
+
+
+(define (my-list-ref items n) 
+     (if (= n 1) 
+         (car items)
+         (my-list-ref (cdr items) (- n 1 ))))
+     
+(define (fib2 n a b)
+            (if (= n 0)
+                `()
+                (append ( list (+ a b)) (fib2 (- n 1) (+ a b) a )  )
+                )
+            )    
+     
+(define (fib n l )
+    
+    (if (null? l)
+        (append (list 1 1) (fib2 (- n 2) 1 1 )  )
+        (append l  (fib2 n (my-list-ref l ( - (my-length l) 0 )  )  (my-list-ref l ( - (my-length l) 1 )  )   ))
+        
+        )
+
+    
+    )     
+     
+
+(display (fib 10 (list 6 7 8 9 3) )    )
+
+		  </pre>
+			 
+		  
+		<h3>  <center>Код програми 2     </center>  </h3>
+		  <pre>
+		  
+(define (my-length lis) 
+   (cond ((null? lis)
+          0)
+         (else
+          (+ 1 (my-length (cdr lis))))))
+
+
+
+
+(define (my-list-ref items n) 
+     (if (= n 1) 
+         (car items)
+         (my-list-ref (cdr items) (- n 1 ))))
+     
+(define (fib2 n a b); прорахунок значень в послідовності фібоначі 
+            (if (= n 0)
+                `()
+                (append ( list (+ a b)) (fib2 (- n 1) (+ a b) a )  )
+                )
+            )    
+     
+(define (fib n l ) ; початкові значення фібоначі
+    
+    (if (null? l)
+        (append (list 1 1) (fib2 (- n 2) 1 1 )  )
+        (append l  (fib2 n (my-list-ref l ( - (my-length l) 0 )  )  (my-list-ref l ( - (my-length l) 1 )  )   ))
+        
+        )
+
+    
+    )     
+   
+(define (f1 b m n acc ) ; зробити спрінт та повернути залишок задач   
+
+    (if (= n 0)
+        (begin
+        (display "acc sprint =")
+        (display  acc)
+         (newline)
+        (cons b m)
+        )        
+        ( begin 
+        
+          (newline)
+        (display "------------------------------- \n" )
+          (display "priotity:" )
+           (display (car m) )
+            (display " \n exemple: " )
+             (display (car b) )
+         (display "\n ------------------------------- \n" )
+          (f1 (cdr b) (cdr m) (- n 1)  (+ acc (car m)) )
+            )
+        )    
+    )   
+   
+
+(define (f2 b m n); виконання бедлогу
+          (display " \n ============================== \n sprint \n =================================================   ")
+        (let ((a (min (my-length b) n)))
+            (if (= a 0)
+                0
+               (let ((n-m (f1 b m a 0)  ))
+                     (f2 (car n-m) (cdr n-m) n )                 
+                   
+                   )
+                )
+            
+            
+            )
+    
+    
+    )
+
+
+(f2 (list 1 2 3 4 5)  (fib 5 `() ) 2 )   
+		  </pre>
+		  
+		  <hr id ="hr1">  
+	   
+		  <h2>  <center><a name="k6"></a> Посилання на проект з вихідним кодом  </center>  </h2>
+		  
+		  <center> <a  href="https://github.com/Andrey0277/FP_IPZ_42/tree/main"> посилання на гітхаб </a></center> 
+		  
+		  
+		  
+		  <hr id ="hr1">  
+   
+ <h2>  <center><a name="k7"></a> Скрішоти результаів </center>  </h2>
+	     <center> <h3>  програма 1 </h3> </center>
+		 
+		 <center><img src="rez1_1.png" width="200" class="round">
+		 <br><br>
+		 <center><img src="rez2_2.png" width="300" class="round">
+		 <br> новий масив на базі попереднього
+		 </center> 
+		 
+		 <br>
+		 <center> <h3>  програма 2 </h3> </center>
+		
+		  
+	  <center><img src="rez2_1.png" width="300" class="round"></center> 
+	 <br>
+	 <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k8"></a> Аналіз достовірності результатів </center>  </h2>
+	 
+	   <h3>  як можна побачити результати співпадають з очікуваними в першій та 2 програмі </h3> <br>
+	  
+	  <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k9"></a> Висновки </center>  </h2>
+	  В результаті роботи було вирішено дві заданні програмні задачі за допомогою мови Shema.<br>
+		При розв'язанні були деякі труднощі в розуміні, що вимагається в 2 задачі
+	 
+  </div>
+ </body>
+
+</div>
+</html>

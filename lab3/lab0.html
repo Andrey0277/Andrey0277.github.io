@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Абсолютное позиционирование</title>
+  <style type="text/css">
+  
+  
+   body { 
+        background: url(http://bgfons.com/upload/paint_texture2104.jpg) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 600%; 
+		overflow: auto;
+		
+    }
+  
+   
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   
+
+   #header {
+    height: 210px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+   }
+   
+   
+   #hr1 {
+    border: none; /* Убираем границу */
+    background-color:black ; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #header h1 { padding: 20px; margin: 0; }
+   
+   
+   #sidebar { 
+    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 82px; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+    top: 82px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+  }
+  
+     #content2 { 
+        position: static;
+        background: #ffffff;
+        width: 900px;
+       
+
+        margin-top: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+		 margin: 0 auto;
+        outline: 2px solid #000;
+
+        overflow: auto;
+    }
+  #sidebar1 {
+  
+		border-left:2px solid #000;
+        margin-top: 83px;
+        overflow: auto; 
+
+        width: 300px; 
+        height: 650px;
+
+        float: right;
+
+        background: #ffffff; 
+
+        top: 100px; 
+        bottom: 0; 
+    }
+  
+  </style>
+ </head>
+ <body>
+ 
+ 
+
+ 
+ <div id="content2"> 
+ 
+  
+ 
+  <div id="header"><h1> <center>  Лабораторна 3 <br> Форми lambda та let, вираз присвоєння set! для розв’язання нелінійних рівнянь та чисельного інтегрування функцій
+	 <br> Варіант 8   </center> </h1>
+   </div>
+  
+  <div id="content">
+   <h2>  <center> Виконавець  </center>  </h2>
+   <p>
+   
+   <table>
+        <tr><td> Посада: </td> <td>  Студент  </td></tr>
+		  <tr><td> Курс: </td> <td>  IV  </td></tr>
+	    <tr><td> Група:   </td> <td>      ІПЗ-42 </td></tr>
+		<tr><td>  ПІБ:    </td> <td>       Іваненко А.Ю </td></tr>
+		<tr><td> Рік навчання: </td> <td> 2021-2022 </td></tr>
+	</table>
+
+	
+   <hr id ="hr1">
+  <h2>  <center> Зміст</center>  </h2>
+	
+	<h3><a href="#k1">Мета</a></h3>
+	<h3><a href="#k2">Умова задачі</a></h3>
+	<h3><a href="#k3">Структура програми</a></h3>
+	<h3><a href="#k4">Обгрунтування вибору середовища</a></h3>
+	<h3><a href="#k5">Код програми в коментарях</a></h3>
+	<h3><a href="#k6">Посилання на проект з вихідним кодом</a></h3>
+	<h3><a href="#k7">Скріншоти результатів</a></h3>
+	<h3><a href="#k8">Аналіз достовірності результатів</a></h3>
+	<h3><a href="#k9">Висновки</a></h3>
+	
+	<hr id ="hr1">
+
+
+   
+   <h2>  <center>  <a name="k1"></a>  Мета  </center>  </h2>
+	   
+ Розв’язати нелінійні рівняння та здійснити чисельне інтегрування функцій наближеними методами, використовуючи мови функціонального програмування та lambda, let та set! форми.
+		<hr id ="hr1">  
+	   
+       
+   <h2>  <center> <a name="k2"></a> Умови задач </center>  </h2>
+   
+	  <center> <h3> Задача 1 </h3> <br></center>
+	8.1 Знайти корені нелінійного рівняння виду  <img src="form_1_1.png" width="100" class="round">.	 <br>
+	Пошук наближеного значення хоча б одного кореня рівняння f(x) = 0 на відрізку [a; b] здійснювати методами дотичних та бісекції. Значення a, b інтервалу вибрати самостійно. Порівняти результати розв’язків двома методами<br>
+		
+		 
+	   
+	 <center>  <h3> Задача 2 </h3> <br></center>
+	8.2. Написати процедури для обчислити інтеграла за формулами лівих прямокутників і трапеції. Порівняти результати обчислення. 
+
+	 
+		 <img src="form_1_2.png" width="100" class="round">
+		<hr id ="hr1">  
+
+	
+   <h2>  <center><a name="k3"></a> Структура програми  </center>  </h2>
+   
+	   <center>  <h3> Схема задачі 1 </h3> <br></center>
+	   
+	   <center><img src="sheam_1_1.png" width="100" class="round"></center> <br>
+
+		<center>  <h3> Схема задачі 2 </h3> <br></center>
+	   
+		  <center><img src="sheam_1_2.png" width="100" class="round"></center> 
+	   
+		<hr id ="hr1">  
+   
+    <h2>  <center> <a name="k4"></a>Обгрунтування вибору середовища та мови функціонального програмування  </center>  </h2>
+   
+		<pre>
+	 Online Clisp IDE https://www.jdoodle.com/execute-clisp-online/ 
+	 Середовище вибране через: 
+		a) -   Легкий зрозумілий інтерфес
+		b) -	Не потрібно нічого  встановлювати на комп'ютер.
+	 Мова Sheme вибрана через:
+		а) - Лекції ведуться на цій мові.
+		b) - Простий синтаксис.
+		
+	  </pre>
+	   <hr id ="hr1">  
+   
+   <h2>  <center><a name="k5"></a>Код програми з коментарями   </center>  </h2>
+		  <h3>  <center>Код програми 1   </center>  </h3>
+		  <pre> 
+		( define (f1 a b x0  err  f df  ); зовнішня функція
+  
+    (define (f2 n n-1 err  f df );  внутрішня функція
+        
+    ( if ( < ( abs (- n n-1 )) err ); перевірка на точність
+        n
+      ( f2  (- n  (/ (f n) (df n) ) )  n err f df )
+      
+      )    
+    
+    )
+    ; (display (df 2 ))
+   
+     ( let (( x (f2  x0 100  err  f df  ) )) ;запущення внутрішньої функції 
+
+    (if ( and  (> x a ) (< x b) )
+        x
+        (begin 
+            (display "вихід за діапазон х ="  )
+            x
+    
+            
+            )
+        ) 
+    )
+   
+    )
+
+(display( f1  -10 10 -2  0.00001    ( lambda ( x )( -(- (* x x)  (* 2 (cos x) ) )    1  ) )     ( lambda ( x )( + ( * 2 x ) (* 2 (sin x))  ) )  )      ); виклик функції
+(newline)
+
+==============================================================================================================
+                                                другий спосіб
+==============================================================================================================
+
+
+( define (f1 a b err  f   ); зовнішня функція
+  
+    (define (f2 a b err f  );  внутрішня функція
+        
+    ( if ( < ( abs (- a b )) err ); перевірка на точність
+        a
+        (if ( < (* (f a ) ( f (/ (+ a b) 2) )     ) 0) 
+            (f2 a (/ (+ a b) 2) err f  )
+            (f2 (/ (+ a b) 2) b err f  )
+            
+            )     
+      
+      )    
+    
+    )
+    ; (display (df 2 ))
+   
+              
+     (if ( < (* (f a) (f b)  ) 0 )
+     (f2   a b err f  )  ;запущення внутрішньої функції 
+     " точки стоять по один бік від осі х"
+     )
+   
+    
+   
+    )
+
+(display( f1  0 2 0.001  ( lambda ( x )( -(- (* x x)  (* 2 (cos x) ) )    1  ) )  )     ); виклик функції
+(newline)
+		  </pre>
+			 
+		  
+		<h3>  <center>Код програми 2     </center>  </h3>
+		  <pre>
+		  
+		  
+		  
+		  
+( define (f1 a b n f   ); зовнішня функція
+  (define (f2 t h b f acc)
+      (if (>=  t b)
+          acc
+      (f2 (+ t h) h b f (+ acc (f t)))      
+          )
+      )
+  
+  
+  (*(/(- b a) n) (f2 a (/ (- b a)n) b f 0 ))
+    )
+
+(display( f1 0 3.14 500 ( lambda ( x )( cos (- x (sin x ) ) ))    )); виклик функції
+(newline);(cos (- x (sin x ) ) )
+		  
+==============================================================================================================
+                                                другий спосіб
+==============================================================================================================
+
+( define (f1 a b n f   ); зовнішня функція
+  (define (f2 t h b f acc)
+      (if (>=  t b)
+          acc
+      (f2 (+ t h) h b f (+ acc (f t)))      
+          )
+      )
+  
+  ( let ((h0 (/(- b a) n) ))
+  (* h0  (+(f2 (+ a h0) h0 (- b h0) f 0 ) (/ (+ (f a) (f b))  2 )  ))
+    )
+)
+
+(display( f1 0 3.14 500 ( lambda ( x )( cos (- x (sin x ) ) ))    )); виклик функції
+(newline);(cos (- x (sin x ) ) )
+
+		  </pre>
+		  
+		  <hr id ="hr1">  
+	   
+		  <h2>  <center><a name="k6"></a> Посилання на проект з вихідним кодом  </center>  </h2>
+		  
+		  <center> <a  href="https://github.com/Andrey0277/FP_IPZ_42/tree/main"> посилання на гітхаб </a></center> 
+		  
+		  
+		  
+		  <hr id ="hr1">  
+   
+ <h2>  <center><a name="k7"></a> Скрішоти результаів </center>  </h2>
+	     <center> <h3>  програма 1 </h3> </center>
+		 
+		 <center><img src="rez1_1.png" width="200" class="round">
+		 <br>
+		 </center> 
+		 
+		 <br>
+		 <center> <h3>  програма 2 </h3> </center>
+		 <center><img src="rez1_2.png" width="200" class="round"></center> 
+		 
+		 <br>
+		  
+	
+	 <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k8"></a> Аналіз достовірності результатів </center>  </h2>
+	 
+	 
+	 
+	   <h3> В першій програмі правильність було перевірено на графічному калькуляторі Desmos. </h3> <br>
+	   
+	    <center><img src="rez2_1.png" width="200" class="round"></center> 
+	  <h3> В другій задачі обидва способи дали однаковий результат. </h3> <br>
+	  <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k9"></a> Висновки </center>  </h2>
+	  В результаті роботи було вирішено дві заданні програмні задачі за допомогою мови Shema.<br>
+	  В другій задачі через неточні підрахунки при сумуванні інтервалів значення могло вийти за діапазон.
+	 
+  </div>
+ </body>
+
+</div>
+</html>

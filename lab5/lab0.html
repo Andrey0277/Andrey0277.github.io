@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Абсолютное позиционирование</title>
+  <style type="text/css">
+  
+  
+   body { 
+        background: url(http://bgfons.com/upload/paint_texture2104.jpg) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 600%; 
+		overflow: auto;
+		
+    }
+  
+   
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   
+
+   #header {
+    height: 180px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+   }
+   
+   
+   #hr1 {
+    border: none; /* Убираем границу */
+    background-color:black ; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #header h1 { padding: 20px; margin: 0; }
+   
+   
+   #sidebar { 
+    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 82px; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+    top: 82px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+  }
+  
+     #content2 { 
+        position: static;
+        background: #ffffff;
+        width: 900px;
+       
+
+        margin-top: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+		 margin: 0 auto;
+        outline: 2px solid #000;
+
+        overflow: auto;
+    }
+  #sidebar1 {
+  
+		border-left:2px solid #000;
+        margin-top: 83px;
+        overflow: auto; 
+
+        width: 300px; 
+        height: 650px;
+
+        float: right;
+
+        background: #ffffff; 
+
+        top: 100px; 
+        bottom: 0; 
+    }
+  
+  </style>
+ </head>
+ <body>
+ 
+ 
+
+ 
+ <div id="content2"> 
+ 
+  
+ 
+  <div id="header"><h1> <center>  Лабораторна 5 <br> Обробка раціональних та комплексних чисел 
+мовами функціонального програмування
+
+	 <br> Варіант 8   </center> </h1>
+   </div>
+  
+  <div id="content">
+   <h2>  <center> Виконавець  </center>  </h2>
+   <p>
+   
+   <table>
+        <tr><td> Посада: </td> <td>  Студент  </td></tr>
+		  <tr><td> Курс: </td> <td>  IV  </td></tr>
+	    <tr><td> Група:   </td> <td>      ІПЗ-42 </td></tr>
+		<tr><td>  ПІБ:    </td> <td>       Іваненко А.Ю </td></tr>
+		<tr><td> Рік навчання: </td> <td> 2021-2022 </td></tr>
+	</table>
+
+	
+   <hr id ="hr1">
+  <h2>  <center> Зміст</center>  </h2>
+	
+	<h3><a href="#k1">Мета</a></h3>
+	<h3><a href="#k2">Умова задачі</a></h3>
+	<h3><a href="#k3">Структура програми</a></h3>
+	<h3><a href="#k4">Обгрунтування вибору середовища</a></h3>
+	<h3><a href="#k5">Код програми в коментарях</a></h3>
+	<h3><a href="#k6">Посилання на проект з вихідним кодом</a></h3>
+	<h3><a href="#k7">Скріншоти результатів</a></h3>
+	<h3><a href="#k8">Аналіз достовірності результатів</a></h3>
+	<h3><a href="#k9">Висновки</a></h3>
+	
+	<hr id ="hr1">
+
+
+   
+   <h2>  <center>  <a name="k1"></a>  Мета  </center>  </h2>
+	   
+  Опанувати технологію абстракції даних в мовах функціонального програмування. Реалізувати програму обробки раціональних та комплексних чисел мовами функціонального програмування, представивши ці числа конструкціями типу «пара»
+		<hr id ="hr1">  
+	   
+       
+   <h2>  <center> <a name="k2"></a> Умови задач </center>  </h2>
+   
+	  <center> <h3> Задача 1 </h3> <br></center>
+8.1 Написати програму, яка демонструє опрацювання операцій з дробами в процесі розв’язання такої задачі. «Чоловік випив 1/6 чашечки чорної кави і долив її молоком. Потім він випив 1/3 чашечки і знову долив її молоком. Потім він випив 1/2 чашечки і знову долив її молоком. Нарешті, він випив повну чашку. Чого він випив більше чорної кави чи молока?»
+		 
+	   
+	 <center>  <h3> Задача 2 </h3> <br></center>
+	Визначити геометричне місце точок (г.м.т.), що зображують комплексне число в декартовій системі координат за заданим модулем  та аргументом  . Відповідно до геометричного подання комплексних чисел геометричним місцем точок можуть бути частини кола, радіус і центр яких слід визначити та надрукувати. Контрольний приклад: при модулі комплексного числа |z| = 1 г.м.т. – коло радіуса 1 з центром (0,0).
+
+		<hr id ="hr1">  
+
+	
+   <h2>  <center><a name="k3"></a> Структура програми  </center>  </h2>
+   
+	   <center>  <h3> Схема задачі 1 </h3> <br></center>
+	   
+	   <center><img src="sheam_1_1.png" width="800" class="round"></center> <br>
+
+		<center>  <h3> Схема задачі 2 </h3> <br></center>
+	   
+		  <center><img src="sheam_1_2.png" width="500" class="round"></center> 
+	   
+		<hr id ="hr1">  
+   
+    <h2>  <center> <a name="k4"></a>Обгрунтування вибору середовища та мови функціонального програмування  </center>  </h2>
+   
+		<pre>
+	 Online Clisp IDE https://www.jdoodle.com/execute-clisp-online/ 
+	 Середовище вибране через: 
+		a) -   Легкий зрозумілий інтерфес
+		b) -	Не потрібно нічого  встановлювати на комп'ютер.
+	 Мова Sheme вибрана через:
+		а) - Лекції ведуться на цій мові.
+		b) - Простий синтаксис.
+		
+	  </pre>
+	   <hr id ="hr1">  
+   
+   <h2>  <center><a name="k5"></a>Код програми з коментарями   </center>  </h2>
+		  <h3>  <center>Код програми 1   </center>  </h3>
+		  <pre> 
+(define (numer x) (car x))			;чисельник
+(define (denom x) (cdr x))		;знаменник
+(define (make-rat n d) (cons n d))		; створення пари
+(define(print-rat x)			; друк пари 
+  (newline)
+  (display (numer x))
+  (display "/")
+  (display (denom x)))
+
+(define (add-rat x y)
+      (make-rat (+ (* (numer x) (denom y)
+                    )
+                   (* (numer y) (denom x)
+                    )
+                 )
+                 (* (denom x) (denom y)
+                 )
+       )
+    )
+ 
+;===========віднімання дробив===============
+(define (sub-rat x y)
+       (make-rat (- (* (numer x) (denom y))
+                             (* (numer y) (denom x)))
+                          (* (denom x) (denom y))))
+                      
+(define (sum lis) ;сума дробів
+(define (sum2 lis acc)
+   (cond ((null? lis)
+            acc)
+         (else
+          (sum2 (cdr lis) (add-rat (car lis) acc))   ) )
+)
+ 
+    (sum2 lis (make-rat 0 1))
+            
+) 
+(define (f1 d_c_m)
+    
+   ( cond ( (> d_c_m 0) 
+            "кави більше")
+       ((< d_c_m 0)
+         "молока більше"
+       )
+       (else 
+       "порівну"
+       )
+       
+       )
+    
+    
+    )
+
+
+
+(list 1 2 3 4 5) 		; виклк процедур
+( display  ( f1 (  numer ( sub-rat  (make-rat 1 1)  (sum (list (make-rat 1 6) (make-rat 1 3) (make-rat 1 2)   ))))))
+
+		  </pre>
+			 
+		  
+		<h3>  <center>Код програми 2     </center>  </h3>
+		  <pre>
+		  
+(define (numer x) (car x)); дійсна та уявна частина
+(define (denom x) (cdr x))	
+
+
+(define (print-rat x)			; друк пари 
+  (newline)
+  (display (numer x))
+  (display "  i")
+  (display (denom x)))
+
+
+(define (make-from-mag-ang r a); побудова числа за радіусом та кутом
+(cons (* r (cos a)) (* r (sin a))))
+
+
+(define (len-ang r a );коли дан кут та радіус
+    
+    
+    (cons (make-from-mag-ang r a) (make-from-mag-ang (* -1 r) a) )
+    (display " точки \n")
+    (print-rat  ( make-from-mag-ang r a  ) )
+    
+    (print-rat  ( make-from-mag-ang (* -1 ) a  ) )
+    
+    )
+
+(define (beem a); коли дан кут
+    
+    (display "\n пряма що проходе через точки \n")
+     (print-rat  ( make-from-mag-ang 1 a  ) )
+      (print-rat  ( make-from-mag-ang 0 a  ) )
+    )
+
+(define (circle z ); коли дан радіус
+    
+    
+    (display "\n коло з центром в точці 0 0 та радіусом ")
+     (display z)
+    
+    )
+
+
+( len-ang 1 0.4  )
+
+(beem 0.3)
+
+(circle 1 )
+		  </pre>
+		  
+		  <hr id ="hr1">  
+	   
+		  <h2>  <center><a name="k6"></a> Посилання на проект з вихідним кодом  </center>  </h2>
+		  
+		  <center> <a  href="https://github.com/Andrey0277/FP_IPZ_42/tree/main"> посилання на гітхаб </a></center> 
+		  
+		  
+		  
+		  <hr id ="hr1">  
+   
+ <h2>  <center><a name="k7"></a> Скрішоти результаів </center>  </h2>
+	     <center> <h3>  програма 1 </h3> </center>
+		 
+		 <center><img src="rez1_1.png" width="100" class="round">
+	
+		 </center> 
+		 
+		 <br>
+		 <center> <h3>  програма 2 </h3> </center>
+		 <center><img src="rez1_2.png" width="300" class="round"></center> 
+		 
+		 <br>
+		  
+	
+	 <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k8"></a> Аналіз достовірності результатів </center>  </h2>
+	 
+	   <h3> В першій програмі можна порахувати вручну і результат співпаде </h3> <br>
+	  <h3>  В другій програмі був підібраний кут, приблизно  90 градусів, для можливості підрахувати відповідь. Результат  співпав з отриманим   </h3> <br>
+	  <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k9"></a> Висновки </center>  </h2>
+	  В результаті роботи було вирішено дві заданні програмні задачі за допомогою мови Shema.<br>
+	  В другому завданні в описі кількість параметрів (кут та довжина) не співпадали з кількістю парметрів в данному тестовому прикладі (тільки довжина). Тому зроблено декілька функцій для вирішення ситуації.
+	 
+  </div>
+ </body>
+
+</div>
+</html>

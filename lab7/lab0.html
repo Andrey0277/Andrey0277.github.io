@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Абсолютное позиционирование</title>
+  <style type="text/css">
+  
+  
+   body { 
+        background: url(http://bgfons.com/upload/paint_texture2104.jpg) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 900%; 
+		overflow: auto;
+		
+    }
+  
+   
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   
+
+   #header {
+    height: 180px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+   }
+   
+   
+   #hr1 {
+    border: none; /* Убираем границу */
+    background-color:black ; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #header h1 { padding: 20px; margin: 0; }
+   
+   
+   #sidebar { 
+    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 82px; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+    top: 82px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+  }
+  
+     #content2 { 
+        position: static;
+        background: #ffffff;
+        width: 900px;
+       
+
+        margin-top: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+		 margin: 0 auto;
+        outline: 2px solid #000;
+
+        overflow: auto;
+    }
+  #sidebar1 {
+  
+		border-left:2px solid #000;
+        margin-top: 83px;
+        overflow: auto; 
+
+        width: 300px; 
+        height: 650px;
+
+        float: right;
+
+        background: #ffffff; 
+
+        top: 100px; 
+        bottom: 0; 
+    }
+  
+  </style>
+ </head>
+ <body>
+ 
+ 
+
+ 
+ <div id="content2"> 
+ 
+  
+ 
+  <div id="header"><h1> <center>  Лабораторна 7 <br> Обробка рядків та файлів 
+мовами функціонального програмування
+
+	 <br> Варіант 8   </center> </h1>
+   </div>
+  
+  <div id="content">
+   <h2>  <center> Виконавець  </center>  </h2>
+   <p>
+   
+   <table>
+        <tr><td> Посада: </td> <td>  Студент  </td></tr>
+		  <tr><td> Курс: </td> <td>  IV  </td></tr>
+	    <tr><td> Група:   </td> <td>      ІПЗ-42 </td></tr>
+		<tr><td>  ПІБ:    </td> <td>       Іваненко А.Ю </td></tr>
+		<tr><td> Рік навчання: </td> <td> 2021-2022 </td></tr>
+	</table>
+
+	
+   <hr id ="hr1">
+  <h2>  <center> Зміст</center>  </h2>
+	
+	<h3><a href="#k1">Мета</a></h3>
+	<h3><a href="#k2">Умова задачі</a></h3>
+	<h3><a href="#k3">Структура програми</a></h3>
+	<h3><a href="#k4">Обгрунтування вибору середовища</a></h3>
+	<h3><a href="#k5">Код програми в коментарях</a></h3>
+	<h3><a href="#k6">Посилання на проект з вихідним кодом</a></h3>
+	<h3><a href="#k7">Скріншоти результатів</a></h3>
+	<h3><a href="#k8">Аналіз достовірності результатів</a></h3>
+	<h3><a href="#k9">Висновки</a></h3>
+	
+	<hr id ="hr1">
+
+
+   
+   <h2>  <center>  <a name="k1"></a>  Мета  </center>  </h2>
+	   
+   Опанувати теоретичні основи обробки рядків та текстових файлів мовами функціонального програмування та розробити програми їх реалізації
+		<hr id ="hr1">  
+	   
+       
+   <h2>  <center> <a name="k2"></a> Умови задач </center>  </h2>
+   
+	  <center> <h3> Задача 1 </h3> <br></center>
+	Записати в текстовий файл n речень тексту, що задаються програмою на функціональній мові програмування. Речення – це рядок, що закінчується символом «точка». 
+	Зчитати рядки із створеного програмою файлу, вивести їх на екран. Переписати кожне речення, розташувавши слова в порядку зменшення довжини слів. Записати в новий текстовий
+	файл результат обробки тексту
+	
+		<hr id ="hr1">  
+
+	
+   <h2>  <center><a name="k3"></a> Структура програми  </center>  </h2>
+   
+	   <center>  <h3> Схема задачі 1 </h3> <br></center>
+	   
+	   <center><img src="sheam_1_1.png" width="700" class="round"></center> <br>
+
+		
+	   
+		<hr id ="hr1">  
+   
+    <h2>  <center> <a name="k4"></a>Обгрунтування вибору середовища та мови функціонального програмування  </center>  </h2>
+   
+		<pre>
+	 Online Clisp IDE https://www.jdoodle.com/execute-clisp-online/ 
+	 Середовище вибране через: 
+		a) -   Легкий зрозумілий інтерфес
+		b) -	Не потрібно нічого  встановлювати на комп'ютер.
+	 Мова Sheme вибрана через:
+		а) - Лекції ведуться на цій мові.
+		b) - Простий синтаксис.
+		
+	  </pre>
+	   <hr id ="hr1">  
+   
+   <h2>  <center><a name="k5"></a>Код програми з коментарями   </center>  </h2>
+		  <h3>  <center>Код програми 1   </center>  </h3>
+		  <pre> 
+		
+;====== запис рядків у файл==============
+
+(define (read_file path  )
+    
+   (apply string (file->char_list path ))
+    )
+
+(define (file->char_list path)
+ (call-with-input-file path
+   (lambda (input-port)
+     (let loop ((x (read-char input-port)))
+       (cond 
+        ((eof-object? x) '())
+        (#t (begin (cons x (loop (read-char input-port))))))))))
+
+;===============================
+
+
+
+
+
+
+;Записати кожне речення тексту в порядку зростання кількості голосних букв в ;слові.
+(define T (quote("hello mrs." "aaaaaaaaa" "what are you doing?" "bbbbbbbbbbbb" "good bye.")))
+;============= визначити голосні ===================
+(define (isVowelChar char)  
+  (cond ((eq? char #\e) 1)	
+        ((eq? char #\y) 1)
+        ((eq? char #\u) 1)
+        ((eq? char #\i) 1)
+        ((eq? char #\o) 1)
+        ((eq? char #\a) 1)
+        (else 0)
+  ))
+;===========порахувати кількість голосних ==============
+ (define (vowelCount sentence)
+  (if(> (length sentence) 0)
+  (+ (isVowelChar (car sentence)) (vowelCount(cdr sentence)))
+  0)
+ )
+;===============знайти слово з максимальною кількістю голосних==
+(define (maxVowelSentence word sentence)
+  (if (not(null? sentence))
+      (if(< (string-length  word)  ( string-length  (car sentence) ))
+         (maxVowelSentence word (cdr sentence))
+         (maxVowelSentence (car sentence) (cdr sentence))
+         )
+      word
+  ) 
+ )
+;==========видалити елемент зі списку===================
+(define delete
+  (lambda (item list)
+    (cond
+     ((equal? item (car list)) (cdr list))
+     (else (cons (car list) (delete item (cdr list)))))
+))
+;===========сортування слів по кількооті голосних======================
+(define (sortText text)
+  (if (not(null? text))
+      (cons (maxVowelSentence (car text) (cdr text))
+            (sortText (delete (maxVowelSentence (car text) (cdr text)) text)))
+        `()
+  )
+)
+
+
+
+
+(define (get-end-list  vec  s )
+    (define ( asd a end vec s )
+        
+        
+        ( if (= a end)
+          `()
+           (if ( eq? (vector-ref vec a)  s)
+                 (cons a (asd (+ a 1) end vec s  ) )
+                 ( asd (+ a 1) end vec s )
+                 )
+    )
+        )
+    
+    (asd 0 (vector-length vec) vec s )
+     )
+
+
+
+(define (asd3  vec a b )
+    
+   (if (= a b)
+        `()
+    (cons (vector-ref vec a)  (asd3 vec (+ a 1) b  )    )    
+    
+    )
+    
+    )
+
+(define (sentense vec l)
+    
+        (define (asd2  vec l a) 
+            
+            (if (null? l ) 
+                `()
+                (cons  (asd3 vec (+ a 1)  (car l)  )  (asd2 vec (cdr l) (car l) )    )
+                )
+            
+            )
+        
+    (asd2 vec l -1 )
+    
+    )
+
+
+
+(define (f2 v s )
+    
+    (append (get-end-list   v s   )  (list ( vector-length  v )) )
+    
+    )
+
+
+
+
+
+(define (list-str l)
+     (if (null? l ) 
+    `()
+   (cons (list->string (car l)) (list-str (cdr l))  )
+     )
+    )
+
+
+(define (clear l)
+    
+    (if ((string=? (car l) "."))
+        `()
+        ( cons  (car l)  (clear (cdr l))   )
+        )
+    
+    )
+
+
+
+(define (concat l )
+    
+    (if (null? l)
+     ". "    
+    (string-append (string-append(car l) " ") (concat(cdr l)) ) 
+    )
+    )
+
+
+(define (f3 l) 
+    
+    
+    (if (null? l)  
+     `""
+     
+     (begin (let ((be 5)  ( vec (list->vector (cdr(car l))))   )
+   
+      (set! be (f2   vec   #\   ) )
+      
+     
+      
+      (string-append (concat  (sortText (list-str (sentense vec be)))) (f3 (cdr l))   )
+      
+          )
+      ))
+    )
+
+(define (f1 l )
+    
+     (let ((be 5)  ( vec (list->vector (car l)))   )
+   
+      (set! be (f2   vec   #\   ) )
+      
+      
+      ( string-append (concat (sortText (list-str ( sentense vec be))))  (f3 (cdr l))  ) 
+      
+          )
+    
+  
+    
+    )
+
+
+
+
+
+
+(let ((port (open-output-file "/myfiles/ff1.txt"))) 
+; в імені не припустимі пробіли та кирілицю
+(write '(When I find myself in times of trouble. ) port)
+(write '(Mother Mary  comes to me. ) port)
+(write '(Speaking words of wisdom, "Let it be.") port)
+
+(close-output-port port))
+;"/uploads/f1.txt"
+
+( let
+  ((vec (string->vector (read_file "/myfiles/ff1.txt")) ) (be 5)    )
+
+(set! be (get-end-list   vec  #\.  )   )
+
+(set! be  (f1 ( sentense vec be)   ) )
+
+
+
+(let ((port (open-output-file "/myfiles/ff2.txt"))) 
+; в імені не припустимі пробіли та кирілицю
+(write be port)
+
+(close-output-port port))
+
+
+)
+
+
+
+
+
+
+
+
+
+		  </pre>
+			 
+		  
+		
+		  
+		  <hr id ="hr1">  
+	   
+		  <h2>  <center><a name="k6"></a> Посилання на проект з вихідним кодом  </center>  </h2>
+		  
+		  <center> <a  href="https://github.com/Andrey0277/FP_IPZ_42/tree/main"> посилання на гітхаб </a></center> 
+		  
+		  
+		  
+		  <hr id ="hr1">  
+   
+ <h2>  <center><a name="k7"></a> Скрішоти результаів </center>  </h2>
+	     <center> <h3> Вхідні данні  </h3> </center>
+		 
+		 <center><img src="rez1_1.png" width="700" class="round">
+		 
+		 </center> 
+		 
+		 <br>
+		 <center> <h3>  Вихідні данні </h3> </center>
+		 <center><img src="rez1_2.png" width="700" class="round"></center> 
+		 
+		 <br>
+		  
+	 <br>
+	 <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k8"></a> Аналіз достовірності результатів </center>  </h2>
+	 
+	  Ми можемо бачити на вході 3 речення на виході тіж речення, але слова в них просортовані в зростаючому порядку. Як можемо побачити на картиніці результату, теоретичний та практичний результат співпадають.  
+	  <h3>  </h3> <br>
+	  
+	  <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k9"></a> Висновки </center>  </h2>
+	  В результаті роботи було створена програма, яка читає/записує текстові файли та сортує речення.  <br>
+	  В процесі роботи були деякі складності при конвертуванні данних  <br>
+	 
+  </div>
+ </body>
+
+</div>
+</html>

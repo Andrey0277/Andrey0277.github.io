@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Абсолютное позиционирование</title>
+  <style type="text/css">
+  
+  
+   body { 
+        background: url(http://bgfons.com/upload/paint_texture2104.jpg) no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 900%; 
+		overflow: auto;
+		
+    }
+  
+   
+   #sidebar, #content { overflow: auto; padding: 10px; }
+   
+
+   #header {
+    height: 180px; /* Высота слоя */
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+   }
+   
+   
+   #hr1 {
+    border: none; /* Убираем границу */
+    background-color:black ; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+   }
+   
+   #header h1 { padding: 20px; margin: 0; }
+   
+   
+   #sidebar { 
+    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    top: 82px; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+   #content {
+    top: 82px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+  }
+  
+     #content2 { 
+        position: static;
+        background: #ffffff;
+        width: 900px;
+       
+
+        margin-top: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+		 margin: 0 auto;
+        outline: 2px solid #000;
+
+        overflow: auto;
+    }
+  #sidebar1 {
+  
+		border-left:2px solid #000;
+        margin-top: 83px;
+        overflow: auto; 
+
+        width: 300px; 
+        height: 650px;
+
+        float: right;
+
+        background: #ffffff; 
+
+        top: 100px; 
+        bottom: 0; 
+    }
+  
+  </style>
+ </head>
+ <body>
+ 
+ 
+
+ 
+ <div id="content2"> 
+ 
+  
+ 
+  <div id="header"><h1> <center>  Лабораторна 8 <br> Символьні обчислення мовами функціонального програмування.
+Операції з многочленами. 
+
+
+	 <br> Варіант 8   </center> </h1>
+   </div>
+  
+  <div id="content">
+   <h2>  <center> Виконавець  </center>  </h2>
+   <p>
+   
+   <table>
+        <tr><td> Посада: </td> <td>  Студент  </td></tr>
+		  <tr><td> Курс: </td> <td>  IV  </td></tr>
+	    <tr><td> Група:   </td> <td>      ІПЗ-42 </td></tr>
+		<tr><td>  ПІБ:    </td> <td>       Іваненко А.Ю </td></tr>
+		<tr><td> Рік навчання: </td> <td> 2021-2022 </td></tr>
+	</table>
+
+	
+   <hr id ="hr1">
+  <h2>  <center> Зміст</center>  </h2>
+	
+	<h3><a href="#k1">Мета</a></h3>
+	<h3><a href="#k2">Умова задачі</a></h3>
+	<h3><a href="#k3">Структура програми</a></h3>
+	<h3><a href="#k4">Обгрунтування вибору середовища</a></h3>
+	<h3><a href="#k5">Код програми в коментарях</a></h3>
+	<h3><a href="#k6">Посилання на проект з вихідним кодом</a></h3>
+	<h3><a href="#k7">Скріншоти результатів</a></h3>
+	<h3><a href="#k8">Аналіз достовірності результатів</a></h3>
+	<h3><a href="#k9">Висновки</a></h3>
+	
+	<hr id ="hr1">
+
+
+   
+   <h2>  <center>  <a name="k1"></a>  Мета  </center>  </h2>
+	   
+   Опанувати теоретичні основи символьних обчислень мовами функціонального програмування. Розробити програми символьного диференціювання та реалізації арифметики поліномів 
+		<hr id ="hr1">  
+	   
+       
+   <h2>  <center> <a name="k2"></a> Умови задач </center>  </h2>
+   
+	  <center> <h3> Задача 1 </h3> <br></center>
+	Написати програму символьного диференціювання по одній змінній алгебраїчних виразів, які містять усі арифметичні операції  (+, –, *, /) та тригонометричні функції 
+	sin(x), cos(x), tg(x), ctg(x). Результат подати у формі  алгебраїчного виразу. Значення алгебраїчного виразу при заданому користувачем значенні змінної не обчислювати
+		<hr id ="hr1">  
+
+	
+   <h2>  <center><a name="k3"></a> Структура програми  </center>  </h2>
+   
+	   <center>  <h3> Схема задачі 1 </h3> <br></center>
+	   
+	   <center><img src="sheam_1_1.png" width="700" class="round"></center> <br>
+
+		
+	   
+		<hr id ="hr1">  
+   
+    <h2>  <center> <a name="k4"></a>Обгрунтування вибору середовища та мови функціонального програмування  </center>  </h2>
+   
+		<pre>
+	 Online Clisp IDE https://www.jdoodle.com/execute-clisp-online/ 
+	 Середовище вибране через: 
+		a) -   Легкий зрозумілий інтерфес
+		b) -	Не потрібно нічого  встановлювати на комп'ютер.
+	 Мова Sheme вибрана через:
+		а) - Лекції ведуться на цій мові.
+		b) - Простий синтаксис.
+		
+	  </pre>
+	   <hr id ="hr1">  
+   
+   <h2>  <center><a name="k5"></a>Код програми з коментарями   </center>  </h2>
+		  <h3>  <center>Код програми 1   </center>  </h3>
+		  <pre> 
+	;========= символьне диференціювання====
+(define (variable? x) (symbol? x))
+(define (same-variable? v1 v2)
+  (and (variable? v1) (variable? v2) (eq? v1 v2)))
+
+(define (make-sum a1 a2) (list '+ a1 a2))
+
+
+
+(define (make-product m1 m2) (list '* m1 m2))
+
+(define (make-devide m1 m2) (list '/ m1 m2))
+
+
+
+
+(define (sum? x)     ; Чи це добуток
+  (and (pair? x) (eq? (car x) '+)))
+
+(define (minus? x)
+  (and (pair? x) (eq? (car x) '-)))
+
+(define (make-minus a1 a2) (list '- a1 a2)) ; продиференціювати операцію мінус
+
+(define (addend s) (cadr s)); взяти перший аргумент 
+(define (augend s) (caddr s)); взяти другий аргумент
+
+(define (product? x)
+  (and (pair? x) (eq? (car x) '*)))
+
+(define (devide? x)
+  (and (pair? x) (eq? (car x) '/)))
+
+
+(define (multiplier p) (cadr p))  ; взяти перший аргумент 
+(define (multiplicand p) (caddr p)); взяти другий аргумент
+
+
+(define (cos? x)
+  (and (pair? x) (eq? (car x) 'cos)))
+
+(define (make-cos a1 a2 ) (list `*  (list `* -1 a2) (list 'sin a1)   )  )
+
+
+
+(define (sin? x)
+  (and (pair? x) (eq? (car x) 'sin)))
+
+(define (make-sin a1 a2 ) (list `*  a2 (list 'cos a1)   )  )
+
+
+
+
+(define (tg? x)
+  (and (pair? x) (eq? (car x) 'tg)))
+
+(define (make-tg a1 a2 ) (list `*  a2 (list '/ 1 (  list `*  (list 'cos a1) (list 'cos a1) )  )   )  )
+
+
+
+(define (ctg? x)
+  (and (pair? x) (eq? (car x) 'ctg)))
+
+(define (make-ctg a1 a2 ) (list `*  a2 (list '/ -1 (  list `*  (list 'sin a1) (list 'sin a1) )  )   )  )
+
+
+
+(define (deriv exp var)
+  (cond ((number? exp) 0)
+    ((variable? exp)
+     (if (same-variable? exp var) 1 0))
+    ((sum? exp)
+     (make-sum (deriv (addend exp) var)
+               (deriv (augend exp) var)))
+           
+     ((minus? exp)
+     (make-minus (deriv (addend exp) var)
+               (deriv (augend exp) var))) 
+      
+           
+           
+    ((product? exp)
+     (make-sum
+       (make-product (multiplier exp)
+                     (deriv (multiplicand exp) var))
+       (make-product (deriv (multiplier exp) var)
+                     (multiplicand exp))))
+                 
+    ((devide? exp)
+    ( make-devide         
+     (make-minus
+         
+       (make-product (deriv (multiplier exp) var)
+                     (multiplicand exp)) 
+         
+       (make-product (multiplier exp)
+                     (deriv (multiplicand exp) var))
+          )  (make-product (multiplicand exp)  (multiplicand exp)  )   )  )
+                 
+    
+     ((cos? exp)
+     (make-cos   (addend exp)  (deriv (addend exp) var)     ) 
+     )
+    
+     ((sin? exp)
+     (make-sin   (addend exp)  (deriv (addend exp) var)     ) 
+     )
+ 
+    ((tg? exp)
+     (make-tg   (addend exp)  (deriv (addend exp) var)     ) 
+     )
+    
+    ((ctg? exp)
+     (make-ctg   (addend exp)  (deriv (addend exp) var)     ) 
+     )
+ 
+ 
+                 
+    (else
+     (display "unknown expression type - DERIV" ))))
+
+(display (deriv '(ctg (* 5 x) ) 'x ))
+(deriv '3 'x)
+(deriv '(* x y) 'x)
+(deriv '(! x y) 'x)
+
+
+
+		  </pre>
+			 
+		  
+		
+		  
+		  <hr id ="hr1">  
+	   
+		  <h2>  <center><a name="k6"></a> Посилання на проект з вихідним кодом  </center>  </h2>
+		  
+		  <center> <a  href="https://github.com/Andrey0277/FP_IPZ_42/tree/main"> посилання на гітхаб </a></center> 
+		  
+		  
+		  
+		  <hr id ="hr1">  
+   
+ <h2>  <center><a name="k7"></a> Скрішоти результаів </center>  </h2>
+	     <center> <h3> Вхідні данні  </h3> </center>
+		 
+		 <center><img src="rez1_1.png" width="300" class="round">
+		 
+		 </center> 
+		 
+		 <br>
+		 <center> <h3>  Вихідні данні </h3> </center>
+		 <center><img src="rez1_2.png" width="700" class="round"></center> 
+		 
+		 <br>
+		  
+	 <br>
+	 <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k8"></a> Аналіз достовірності результатів </center>  </h2>
+	 
+	       Функція вищого порядку є катангенс тому ми за правилом "ціпка" продиференціюєму саму функцію 
+		   (аргументи залишаються не зміними) та помножемо на дифернціал аргументів. Далі навіть для простого множення ми використовуємо формулу диференціювання множення.  u`v + v`u. Після чого диференціюємо синус.
+			 <br> Якщо зробити диференціювання прикладу то ми отримаємо. (-1\(sin( 5sin(x) )*sin( 5sin(x) )))*(cos(5x)), що співпадає з результатом.
+					   
+					   
+	  <h3>  </h3> <br>
+	  
+	  <hr id ="hr1">  
+	 
+	  <h2>  <center><a name="k9"></a> Висновки </center>  </h2>
+	  В результаті роботи було створена програма,яка може диференціювати прості арифметичні операції (+-\*) та тригонометричні функції (cos sin tg ctg)   <br>
+	  В процесі роботи досить сильно дпоміг теоретичний матеріал, так як дав приклади деференціювання деяких функцій.<br>
+	 
+  </div>
+ </body>
+
+</div>
+</html>

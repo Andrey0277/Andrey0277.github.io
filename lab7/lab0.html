@@ -211,7 +211,7 @@
   (+ (isVowelChar (car sentence)) (vowelCount(cdr sentence)))
   0)
  )
-;===============знайти слово з максимальною кількістю голосних==
+;===============знайти слово з максимальною  розміром==
 (define (maxVowelSentence word sentence)
   (if (not(null? sentence))
       (if(< (string-length  word)  ( string-length  (car sentence) ))
@@ -239,7 +239,7 @@
 
 
 
-
+; індекси точок
 (define (get-end-list  vec  s )
     (define ( asd a end vec s )
         
@@ -257,7 +257,7 @@
      )
 
 
-
+; масив від n до m
 (define (asd3  vec a b )
     
    (if (= a b)
@@ -268,6 +268,7 @@
     
     )
 
+;  розбиття масиву за індексами
 (define (sentense vec l)
     
         (define (asd2  vec l a) 
@@ -302,7 +303,7 @@
      )
     )
 
-
+;   видалення точки
 (define (clear l)
     
     (if ((string=? (car l) "."))
@@ -313,7 +314,7 @@
     )
 
 
-
+; зєднання рядка
 (define (concat l )
     
     (if (null? l)
@@ -322,7 +323,7 @@
     )
     )
 
-
+; сортрування та побудова речень від 2 до останього
 (define (f3 l) 
     
     
@@ -341,6 +342,7 @@
       ))
     )
 
+; сортрування та побудова речень перше речення
 (define (f1 l )
     
      (let ((be 5)  ( vec (list->vector (car l)))   )
@@ -365,7 +367,7 @@
 ; в імені не припустимі пробіли та кирілицю
 (write '(When I find myself in times of trouble. ) port)
 (write '(Mother Mary  comes to me. ) port)
-(write '(Speaking words of wisdom, "Let it be.") port)
+(write '(The English Wikipedia was the first Wikipedia edition and has remained the largest.) port)
 
 (close-output-port port))
 ;"/uploads/f1.txt"
@@ -387,13 +389,6 @@
 
 
 )
-
-
-
-
-
-
-
 
 
 		  </pre>
